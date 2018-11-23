@@ -13,7 +13,7 @@ services:
         # whether to skip puppeteer Chromium installation or not, refer to https://docs.rsshub.app/en/install/#docker-compose-deployment
         PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 1
     restart: always
-    image: rsshub
+    image: chy9002/rsshub
     ports:
       - 1200:1200
     environment:
