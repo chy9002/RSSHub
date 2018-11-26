@@ -87,6 +87,10 @@
             <a href="https://diygod.me" target="_blank">DIYgod</a>
         </p>
 
+        <p>-- JSON Feed Support by
+            <a href="https://colcai.com" target="_blank">colcai</a>
+        </p>
+
         {{ if showDebug }}
         <details>
             <summary>debug</summary>
