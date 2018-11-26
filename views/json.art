@@ -1,8 +1,8 @@
 {
     "version": "https://jsonfeed.org/version/1",
     "title": "{{ title || 'RSSHub' }}",
-    "home_page_url": "{{ link || 'https://github.com/DIYgod/RSSHub' }}",
-    "description": "{{ description || title }} - Made with love by RSSHub(https://github.com/DIYgod/RSSHub)",
+    "home_page_url": "{{ link || 'https://github.com/chy9002/RSSHub' }}",
+    "description": "{{ description || title }} - Abandoned by RSSHub(https://github.com/DIYgod/RSSHub) Resurrected with love by RSSHub(https://github.com/chy9002/RSSHub)",
     "author": {
         "name": "{{@ author || 'RSSHub' }}"
     },
