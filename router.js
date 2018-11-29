@@ -409,6 +409,9 @@ router.get('/keep/user/:id', require('./routes/keep/user'));
 router.get('/qidian/chapter/:id', require('./routes/qidian/chapter'));
 router.get('/qidian/forum/:id', require('./routes/qidian/forum'));
 
+// 纵横
+router.get('/zongheng/chapter/:id', require('./routes/zongheng/chapter'));
+
 // 刺猬猫
 router.get('/ciweimao/chapter/:id', require('./routes/ciweimao/chapter'));
 
@@ -541,6 +544,11 @@ router.get('/shanghaitech/sist/activity', require('./routes/universities/shangha
 
 // 上海交通大学
 router.get('/sjtu/seiee/academic', require('./routes/universities/sjtu/seiee/academic'));
+router.get('/sjtu/seiee/bjwb/major_select', require('./routes/universities/sjtu/seiee/bjwb/major_select'));
+router.get('/sjtu/seiee/bjwb/major_transfer', require('./routes/universities/sjtu/seiee/bjwb/major_transfer'));
+router.get('/sjtu/seiee/bjwb/postgraduate', require('./routes/universities/sjtu/seiee/bjwb/postgraduate'));
+router.get('/sjtu/seiee/bjwb/abroad', require('./routes/universities/sjtu/seiee/bjwb/abroad'));
+
 router.get('/sjtu/gs/tzgg/:type?', require('./routes/universities/sjtu/gs/tzgg'));
 
 // 江南大学
@@ -633,6 +641,9 @@ router.get('/tju/sse/:type?', require('./routes/universities/tju/sse/notice'));
 
 // 华南理工大学
 router.get('/scut/jwc/:category?', require('./routes/universities/scut/jwc'));
+
+// 温州商学院
+router.get('/wzbc/:type?', require('./routes/universities/wzbc/news'));
 
 // ifanr
 router.get('/ifanr/:channel?', require('./routes/ifanr/index'));
@@ -865,5 +876,13 @@ router.get('/anigamer/anime/:sn', require('./routes/anigamer/anime'));
 
 // Apkpure
 router.get('/apkpure/versions/:region/:pkg', require('./routes/apkpure/versions'));
+
+// 豆瓣美女
+router.get('/dbmv/:category?', require('./routes/dbmv/index'));
+
+// 中国药科大学
+router.get('/cpu/home', require('./routes/cpu/home'));
+router.get('/cpu/jwc', require('./routes/cpu/jwc'));
+router.get('/cpu/yjsy', require('./routes/cpu/yjsy'));
 
 module.exports = router;
