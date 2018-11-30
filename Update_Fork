@@ -1,0 +1,3 @@
+git pull origin
+git pull upstream master
+git push origin
