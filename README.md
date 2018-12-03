@@ -3,3 +3,12 @@
 有对应的Docker.
 
 该fork根据我心情不定期从原repo不定期更新，如果原repo出现的大规模改动我一时半会儿照顾不过来，那该fork就会停止更新。
+
+_以下是原版RSSHub的License声明，予以保留。_
+
+## Author
+
+**RSSHub** © [DIYgod](https://github.com/DIYgod), Released under the [MIT](./LICENSE) License.<br>
+Authored and maintained by DIYgod with help from contributors ([list](https://github.com/DIYgod/RSSHub/contributors)).
+
+> Blog [@DIYgod](https://diygod.me) · GitHub [@DIYgod](https://github.com/DIYgod) · Twitter [@DIYgod](https://twitter.com/DIYgod) · Telegram Channel [@awesomeDIYgod](https://t.me/awesomeDIYgod)

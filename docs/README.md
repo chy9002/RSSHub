@@ -1066,9 +1066,9 @@ GitHub 官方也提供了一些 RSS:
 
 <route name="小组话题" author="SettingDust" example="/bangumi/group/boring" path="/bangumi/group/:id" :paramsDesc="['小组 id, 在小组页面地址栏查看']"/>
 
-### 忧郁的弟弟
+### 忧郁的 loli
 
-<route name="文章" author="DIYgod" example="/mygalgame" path="/mygalgame"/>
+<route name="文章" author="DIYgod" example="/mmgal" path="/mmgal"/>
 
 ### 看漫画
 
@@ -1623,6 +1623,8 @@ category 列表：
 | 校园新闻 | 媒体商院 | 通知公告 | 人才招聘 | 行事历  | 招标公告 | 学术动态 |
 | -------- | -------- | -------- | -------- | ------- | -------- | -------- |
 | news     | media    | notice   | jobs     | workday | tender   | activity |
+
+</route>
 
 ## 传统媒体
 
