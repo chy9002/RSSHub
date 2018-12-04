@@ -327,6 +327,7 @@ router.get('/yande.re/post/popular_recent/:period', require('./routes/yande.re/p
 
 // 纽约时报
 router.get('/nytimes', require('./routes/nytimes/index'));
+router.get('/nytimes/morning_post', require('./routes/nytimes/morning_post'));
 
 // 3dm
 router.get('/3dm/:name/:type', require('./routes/3dm/game'));
@@ -549,6 +550,7 @@ router.get('/sjtu/seiee/bjwb/major_select', require('./routes/universities/sjtu/
 router.get('/sjtu/seiee/bjwb/major_transfer', require('./routes/universities/sjtu/seiee/bjwb/major_transfer'));
 router.get('/sjtu/seiee/bjwb/postgraduate', require('./routes/universities/sjtu/seiee/bjwb/postgraduate'));
 router.get('/sjtu/seiee/bjwb/abroad', require('./routes/universities/sjtu/seiee/bjwb/abroad'));
+router.get('/sjtu/seiee/bjwb/international', require('./routes/universities/sjtu/seiee/bjwb/international'));
 
 router.get('/sjtu/gs/tzgg/:type?', require('./routes/universities/sjtu/gs/tzgg'));
 
@@ -724,6 +726,7 @@ router.get('/houxu/:type/:id', require('./routes/houxu/houxu'));
 // 老司机
 router.get('/laosiji/hot', require('./routes/laosiji/hot'));
 router.get('/laosiji/feed', require('./routes/laosiji/feed'));
+router.get('/laosiji/hotshow/:id', require('./routes/laosiji/hotshow'));
 
 // 99% Invisible
 router.get('/99percentinvisible/transcript', require('./routes/99percentinvisible/transcript'));
@@ -887,6 +890,9 @@ router.get('/cpu/jwc', require('./routes/cpu/jwc'));
 router.get('/cpu/yjsy', require('./routes/cpu/yjsy'));
 
 // 字幕组
-router.get('/zimuzu/resource/:id', require('./routes/zimuzu/resource'));
+router.get('/zimuzu/resource/:id?', require('./routes/zimuzu/resource'));
+
+// 虎嗅
+router.get('/huxiu/tag/:id', require('./routes/huxiu/tag'));
 
 module.exports = router;

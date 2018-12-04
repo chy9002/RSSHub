@@ -932,7 +932,7 @@ GitHub 官方也提供了一些 RSS:
 
 :::
 
-<route name="影视" author="DIYgod" example="/zimuzu/resource/37031" path="/zimuzu/resource/:id" :paramsDesc="['影视 id，对应影视的 URL 中找到']"/>
+<route name="影视" author="DIYgod" example="/zimuzu/resource/37031" path="/zimuzu/resource/:id?" :paramsDesc="['影视 id，对应影视的 URL 中找到，为空时输出最近更新']"/>
 
 ### Sankaku Complex
 
@@ -1273,6 +1273,8 @@ GitHub 官方也提供了一些 RSS:
 <route name="电子信息与电气工程学院本科教务办 -- 交换交流" author="SkyZH" example="/sjtu/seiee/bjwb/abroad" path="/universities/sjtu/seiee/bjwb/abroad"/>
 
 <route name="电子信息与电气工程学院本科教务办 -- 直升研究生" author="SkyZH" example="/sjtu/seiee/bjwb/postgraduate" path="/universities/sjtu/seiee/bjwb/postgraduate"/>
+
+<route name="电子信息与电气工程学院本科教务办 -- 国际办学" author="SkyZH" example="/sjtu/seiee/bjwb/international" path="/universities/sjtu/seiee/bjwb/international"/>
 
 <route name="研究生通知公告" author="mzr1996" example="/sjtu/gs/tzgg/pyxx" path="/universities/sjtu/gs/tzgg/:type?" :paramsDesc="['默认列举所有通知公告']">
 
@@ -1689,6 +1691,8 @@ Category 列表:
 通过提取文章全文，以提供比官方源更佳的阅读体验。
 
 </route>
+
+<route name="每日简报" author="xyqfer" example="/nytimes/morning_post" path="/nytimes/morning_post"/>
 
 ### 新京报
 
@@ -2368,6 +2372,7 @@ IATA 国际航空运输协会机场代码, 参见[维基百科 国际航空运�
 
 <route name="首页" author="xyqfer" example="/laosiji/feed" path="/laosiji/feed"/>
 <route name="24小时热门" author="xyqfer" example="/laosiji/hot" path="/laosiji/hot"/>
+<route name="节目" author="xyqfer" example="/laosiji/hotshow/128" path="/laosiji/hotshow/:id" :paramsDesc="['节目 id']"/>
 
 ### 99% Invisible
 
@@ -2499,3 +2504,7 @@ board 和 build 可在[这里](http://api.ineal.me/tss/status)查看
 <route name="分类/欧陆风云" author="MegrezZhu" example="/javbus/western/genre/86" path="/javbus/western/genre/:gid" :paramsDesc="['分类id，详见[网站里](https://www.javbus.work/genre)的链接']" />
 
 <route name="演员/欧陆风云" author="MegrezZhu" example="/javbus/western/star/4hv" path="/javbus/western/star/:sid" :paramsDesc="['演员id，详见[网站里](https://www.javbus.work/actresses)的链接']" />
+
+### 虎嗅
+
+<route name="标签" author="xyqfer" example="/huxiu/tag/291" path="/huxiu/tag/:id" :paramsDesc="['标签 id']" />
