@@ -776,6 +776,7 @@ router.get('/geekpark/breakingnews', require('./routes/geekpark/breakingnews'));
 
 // 百度
 router.get('/baidu/doodles', require('./routes/baidu/doodles'));
+router.get('/baidu/topwords/:boardId?', require('./routes/baidu/topwords'));
 
 // 搜狗
 router.get('/sogou/doodles', require('./routes/sogou/doodles'));
@@ -894,5 +895,12 @@ router.get('/zimuzu/resource/:id?', require('./routes/zimuzu/resource'));
 
 // 虎嗅
 router.get('/huxiu/tag/:id', require('./routes/huxiu/tag'));
+
+// Steam
+router.get('/steam/search/:params', require('./routes/steam/search'));
+router.get('/steam/news/:appids', require('./routes/steam/news'));
+
+// 扇贝
+router.get('/shanbay/checkin/:id', require('./routes/shanbay/checkin'));
 
 module.exports = router;

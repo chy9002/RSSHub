@@ -958,7 +958,7 @@ GitHub 官方也提供了一些 RSS:
 
 <route name="详情" author="gee1k xyqfer" example="/mzitu/post/129452" path="/mzitu/post/:id" :paramsDesc="['详情 id, 可在详情页 URL 中找到']"/>
 
-### 豆瓣美女
+### 不羞涩
 
 <route name="分类" author="kba977" example="/dbmv" path="/dbmv/:category?" :paramsDesc="['分类 id - 若不填该参数, 默认所有']">
 
@@ -2044,6 +2044,17 @@ IATA 国际航空运输协会机场代码, 参见[维基百科 国际航空运�
 
 <route name="a9vgNews 游戏新闻" author="monner-henster" example="/a9vg/a9vg" path="/a9vg/a9vg"/>
 
+### Steam
+
+<route name="Steam search" author="maple3142" example="/steam/search/specials=1&term=atelier" path="/steam/search/:params" :paramsDesc="['搜寻参数']">
+参数 params 请从 Steam 的 URL 取得
+
+Example: `https://store.steampowered.com/search/?specials=1&term=atelier` 中的 params 是 `specials=1&term=atelier`，将它填入 RSSHub 的路由就好
+
+</route>
+
+<route name="Steam news" author="maple3142" example="/steam/news/282800" path="/steam/news/:appids" :paramsDesc="['游戏 id']"/>
+
 ## 小说·文学·阅读
 
 ### 观止（每日一文）
@@ -2260,7 +2271,7 @@ IATA 国际航空运输协会机场代码, 参见[维基百科 国际航空运�
 
 ### Keep
 
-<route name="运动日记" author="Dectinc" example="/keep/user/556b02c1ab59390afea671ea" path="/keep/user/:id" :paramsDesc="['Keep 用户 id']"/>
+<route name="运动日记" author="Dectinc DIYgod" example="/keep/user/556b02c1ab59390afea671ea" path="/keep/user/:id" :paramsDesc="['Keep 用户 id']"/>
 
 ### 懂球帝
 
@@ -2413,6 +2424,14 @@ IATA 国际航空运输协会机场代码, 参见[维基百科 国际航空运�
 
 <route name="百度趣画" author="xyqfer" example="/baidu/doodles" path="/baidu/doodles"/>
 
+<route name="搜索风云榜" author="xyqfer" example="/baidu/topwords/1" path="/baidu/topwords/:boardId?" :paramsDesc="['榜单 id, 默认为`1`']">
+
+| 实时热点 | 今日热点 | 七日热点 | 民生热点 | 娱乐热点 | 体育热点 |
+| -------- | -------- | -------- | -------- | -------- | -------- |
+| 1        | 341      | 42       | 342      | 344      | 11       |
+
+</route>
+
 ### 搜狗
 
 <route name="搜狗特色LOGO" author="xyqfer" example="/sogou/doodles" path="/sogou/doodles"/>
@@ -2508,3 +2527,7 @@ board 和 build 可在[这里](http://api.ineal.me/tss/status)查看
 ### 虎嗅
 
 <route name="标签" author="xyqfer" example="/huxiu/tag/291" path="/huxiu/tag/:id" :paramsDesc="['标签 id']" />
+
+### 扇贝
+
+ <route name="打卡" author="DIYgod" example="/shanbay/checkin/ddwej" path="/shanbay/checkin/:id" :paramsDesc="['用户 id']" />
