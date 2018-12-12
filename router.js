@@ -537,6 +537,11 @@ router.get('/dpu/wlfw/news/:type?', require('./routes/universities/dpu/wlfw/news
 // 东南大学
 router.get('/seu/radio/academic', require('./routes/universities/seu/radio/academic'));
 router.get('/seu/yzb/:type', require('./routes/universities/seu/yzb'));
+router.get('/seu/cse/:type?', require('./routes/universities/seu/cse'));
+
+// 南京航空航天大学
+router.get('/nuaa/jwc/:type?', require('./routes/universities/nuaa/jwc/jwc'));
+router.get('/nuaa/cs/:type?', require('./routes/universities/nuaa/cs/index'));
 
 // 哈尔滨工业大学
 router.get('/hit/jwc', require('./routes/universities/hit/jwc'));
@@ -551,6 +556,7 @@ router.get('/sjtu/seiee/bjwb/major_transfer', require('./routes/universities/sjt
 router.get('/sjtu/seiee/bjwb/postgraduate', require('./routes/universities/sjtu/seiee/bjwb/postgraduate'));
 router.get('/sjtu/seiee/bjwb/abroad', require('./routes/universities/sjtu/seiee/bjwb/abroad'));
 router.get('/sjtu/seiee/bjwb/international', require('./routes/universities/sjtu/seiee/bjwb/international'));
+router.get('/sjtu/seiee/xsb/:type?', require('./routes/universities/sjtu/seiee/xsb'));
 
 router.get('/sjtu/gs/tzgg/:type?', require('./routes/universities/sjtu/gs/tzgg'));
 
@@ -647,6 +653,9 @@ router.get('/scut/jwc/:category?', require('./routes/universities/scut/jwc'));
 
 // 温州商学院
 router.get('/wzbc/:type?', require('./routes/universities/wzbc/news'));
+
+// 河南大学
+router.get('/henu/:type?', require('./routes/universities/henu/news'));
 
 // ifanr
 router.get('/ifanr/:channel?', require('./routes/ifanr/index'));
@@ -902,5 +911,14 @@ router.get('/steam/news/:appids', require('./routes/steam/news'));
 
 // 扇贝
 router.get('/shanbay/checkin/:id', require('./routes/shanbay/checkin'));
+
+// Facebook
+router.get('/facebook/page/:id', require('./routes/facebook/page'));
+
+// 停电通知
+router.get('/tingdiantz/95598/:orgNo/:provinceNo/:outageStartTime/:outageEndTime/:scope?', require('./routes/tingdiantz/95598'));
+
+// 36kr
+router.get('/36kr/search/article/:keyword', require('./routes/36kr/search/article'));
 
 module.exports = router;

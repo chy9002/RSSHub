@@ -563,6 +563,10 @@ RSSHub 提供下列 API 接口:
 
 <route name="分区帖子" author="xyqfer" example="/nga/forum/485" path="/nga/forum/:fid"  :paramsDesc="['分区 id, 可在分区主页 URL 找到']"/>
 
+### Facebook
+
+<route name="粉絲專頁" author="maple3142" example="/facebook/page/SonetPCR" path="/facebook/page/:id" :paramsDesc="['專頁 id']"/>
+
 ## 编程
 
 ### 掘金
@@ -1254,6 +1258,28 @@ GitHub 官方也提供了一些 RSS:
 
 <route name="研究生招生网通知公告" author="Chingyat" example="/seu/yzb/1" path="/universities/seu/yzb/:type" :paramsDesc="['1 为硕士招生, 2 为博士招生, 3 为港澳台及中外合作办学']"/>
 
+<route name="东南大学计算机技术与工程学院" author="LogicJake" example="/seu/cse/xyxw" path="/universities/seu/cse/:type?" :paramsDesc="['分类名(默认为xyxw)']"/>
+
+| 学院新闻 | 通知公告 | 教务信息 | 就业信息 | 学工事务 |
+| -------- | -------- | -------- | -------- | -------- |
+| xyxw     | tzgg     | jwxx     | jyxx     | xgsw     |
+
+### 南京航空航天大学
+
+<route name="教务通知" author="arcosx" example="/nuaa/jwc/all" path="/universities/nuaa/jwc/:type" :paramsDesc="['分类名']">
+
+| 全部 | 教学服务 | 教学建设 | 学生培养 | 教学资源 |
+| ---- | -------- | -------- | -------- | -------- |
+| all  | jxfw     | jxjs     | xspy     | jxzy     |
+
+</route>
+
+<route name="计算机科学与技术学院" author="LogicJake" example="/nuaa/cs/kydt" path="/universities/nuaa/cs/:type?" :paramsDesc="['分类名']"/>
+
+| 通知公告 | 新闻动态 | 科研动态 | 教学动态 | 学生工作 | 招生信息 | 就业信息 |
+| -------- | -------- | -------- | -------- | -------- | -------- | -------- |
+| tzgg     | xwdt     | kydt     | jxdt     | xsgz     | zsxx     | jyxx     |
+
 ### 哈尔滨工业大学
 
 <route name="哈尔滨工业大学教务处通知公告" author="lty96117" example="/hit/jwc" path="/universities/hit/jwc"/>
@@ -1281,6 +1307,14 @@ GitHub 官方也提供了一些 RSS:
 | 通知公告 | 工作信息 | 招生信息 | 培养信息 | 学位学科 | 国际交流 | 创新工程 |
 | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
 | 空       | gzxx     | xwxx1    | pyxx     | xwxx     | gjjl     | cxgc     |
+
+</route>
+
+<route name="电子信息与电气工程学院学生工作办公室" author="Polynomia" example="/sjtu/seiee/xsb/news" path="/universities/sjtu/seiee/xsb/:type?" :paramsDesc="['默认列举所有通知公告']">
+
+| 信息通告 | 奖学金      | 助学金       | 讲座活动 | 党团活动 | 新闻发布 |
+| -------- | ----------- | ------------ | -------- | -------- | -------- |
+| 空       | scholarship | financialAid | lecture  | activity | news     |
 
 </route>
 
@@ -1628,6 +1662,16 @@ category 列表：
 
 </route>
 
+### 河南大学
+
+<route name="河南大学" author="CasterWx" example="/henu/xszl" path="/henu/:type" :paramsDesc="['分类, 见下表']">
+
+| 学生专栏 | 教师专栏 | 新闻公告 | 院部动态 | 高教前沿 |
+| -------- | -------- | -------- | -------- | -------- |
+| xszl     | jszl     | xwgg     | ybdt     | gjqy     |
+
+</route>
+
 ## 传统媒体
 
 ### 央视新闻
@@ -1828,6 +1872,12 @@ Solidot 提供的 feed:
 <route name="广州市" author="xyqfer" example="/tingshuitz/guangzhou" path="/tingshuitz/guangzhou"/>
 
 <route name="东莞市" author="victoriqueko" example="/tingshuitz/dongguan" path="/tingshuitz/dongguan"/>
+
+### 停电通知
+
+<route name="国家电网" author="xyqfer" example="/tingdiantz/95598/36401/36101/2018-12-11/2018-12-18" path="/tingdiantz/95598/:orgNo/:provinceNo/:outageStartTime/:outageEndTime/:scope?" :paramsDesc="['所属省供电公司编码', '所属地市供电公司编码', '开始时间', '结束时间', '停电范围关键字']"/>
+
+> 以上参数可从[查询页面](http://m.95598.cn/95598/woutageNotice/winitOutageNotice)打开控制台抓包获得
 
 ### 中央气象台
 
@@ -2530,4 +2580,8 @@ board 和 build 可在[这里](http://api.ineal.me/tss/status)查看
 
 ### 扇贝
 
- <route name="打卡" author="DIYgod" example="/shanbay/checkin/ddwej" path="/shanbay/checkin/:id" :paramsDesc="['用户 id']" />
+<route name="打卡" author="DIYgod" example="/shanbay/checkin/ddwej" path="/shanbay/checkin/:id" :paramsDesc="['用户 id']" />
+
+### 36kr
+
+<route name="搜索文章" author="xyqfer" example="/36kr/search/article/8%E7%82%B91%E6%B0%AA" path="/36kr/search/article/:keyword" :paramsDesc="['关键字']" />
