@@ -1106,11 +1106,17 @@ GitHub 官方也提供了一些 RSS:
 
 ### MIUI
 
-<route name="MIUI 新版本发布" author="Indexyz" example="/miui/aries" path="/miui/:device/:type?" :paramsDesc="['设备的 `codename` 例如 小米 2s 为 `aries`', '类型, 可选参数']">
+<route name="MIUI 新版本发布" author="Indexyz" example="/miui/aries" path="/miui/:device/:type?/:region?" :paramsDesc="['设备的 `codename` 例如 小米 2s 为 `aries`. 国际版的 `codename` 一般以 `_global` 结尾. 可查阅 MIUI 线刷包下载页面', '类型, 可选参数', '地区, 默认为 `cn`']">
 
-| 稳定版  | 开发版 |
-| ------- | ------ |
-| release | dev    |
+| 类型   | type    |
+| ------ | ------- |
+| 稳定版 | release |
+| 开发版 | dev     |
+
+| 地区   | region |
+| ------ | ------ |
+| 国内版 | cn     |
+| 国际版 | global |
 
 </route>
 
@@ -1770,6 +1776,16 @@ https://rsshub.app/**nuist**/`bulletin` 或 https://rsshub.app/**nuist**/`bullet
 
 </route>
 
+### 南开大学
+
+<route name="南开大学教务处" author="zhongweili" example="/nku/jwc/1" path="/universities/nku/jwc/:type" :paramsDesc="['分区 type, 可在网页 URL 中找到']">
+
+| 通知公告 | 新闻动态 |
+| -------- | -------- |
+| 1        | 2        |
+
+</route>
+
 ## 传统媒体
 
 ### 央视新闻
@@ -1973,7 +1989,9 @@ Solidot 提供的 feed:
 
 ### 停电通知
 
-<route name="国家电网" author="xyqfer" example="/tingdiantz/95598/36401/36101/2018-12-11/2018-12-18" path="/tingdiantz/95598/:orgNo/:provinceNo/:outageStartTime/:outageEndTime/:scope?" :paramsDesc="['所属省供电公司编码', '所属地市供电公司编码', '开始时间', '结束时间', '停电范围关键字']"/>
+获取未来一天的停电通知
+
+<route name="国家电网" author="xyqfer" example="/tingdiantz/95598/36401/36101" path="/tingdiantz/95598/:orgNo/:provinceNo/:scope?" :paramsDesc="['所属省供电公司编码', '所属地市供电公司编码', '停电范围关键字']"/>
 
 > 以上参数可从[查询页面](http://m.95598.cn/95598/woutageNotice/winitOutageNotice)打开控制台抓包获得
 
@@ -2683,3 +2701,7 @@ board 和 build 可在[这里](http://api.ineal.me/tss/status)查看
 ### 36kr
 
 <route name="搜索文章" author="xyqfer" example="/36kr/search/article/8%E7%82%B91%E6%B0%AA" path="/36kr/search/article/:keyword" :paramsDesc="['关键字']" />
+
+### 中国大学 MOOC(慕课)
+
+<route name="最新" author="xyqfer" example="/icourse163/newest" path="/icourse163/newest" />

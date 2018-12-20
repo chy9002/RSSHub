@@ -51,15 +51,6 @@ module.exports = async (ctx, next) => {
                         item.itunes_duration = itunes_duration;
                     }
                 });
-
-            // decode HTML entities
-            ctx.state.data.title && (ctx.state.data.title = he.decode(ctx.state.data.title));
-            ctx.state.data.description && (ctx.state.data.description = he.decode(ctx.state.data.description));
-            ctx.state.data.item &&
-                ctx.state.data.item.forEach((item) => {
-                    item.title && (item.title = he.decode(item.title));
-                    item.description && (item.description = he.decode(item.description));
-                });
         }
 
         const data = {

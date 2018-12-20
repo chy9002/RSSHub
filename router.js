@@ -360,7 +360,7 @@ router.get('/tingshuitz/guangzhou', require('./routes/tingshuitz/guangzhou'));
 router.get('/tingshuitz/dongguan', require('./routes/tingshuitz/dongguan'));
 
 // MIUI 更新
-router.get('/miui/:device/:type?', require('./routes/miui/index'));
+router.get('/miui/:device/:type?/:region?', require('./routes/miui/index'));
 
 // 米哈游
 router.get('/mihoyo/bh3/:type', require('./routes/mihoyo/bh3'));
@@ -669,6 +669,9 @@ router.get('/wzbc/:type?', require('./routes/universities/wzbc/news'));
 // 河南大学
 router.get('/henu/:type?', require('./routes/universities/henu/news'));
 
+// 南开大学
+router.get('/nku/jwc/:type?', require('./routes/universities/nku/jwc/index'));
+
 // ifanr
 router.get('/ifanr/:channel?', require('./routes/ifanr/index'));
 
@@ -929,8 +932,12 @@ router.get('/facebook/page/:id', require('./routes/facebook/page'));
 
 // 停电通知
 router.get('/tingdiantz/95598/:orgNo/:provinceNo/:outageStartTime/:outageEndTime/:scope?', require('./routes/tingdiantz/95598'));
+router.get('/tingdiantz/95598/:orgNo/:provinceNo/:scope?', require('./routes/tingdiantz/95598'));
 
 // 36kr
 router.get('/36kr/search/article/:keyword', require('./routes/36kr/search/article'));
+
+// icourse163
+router.get('/icourse163/newest', require('./routes/icourse163/newest'));
 
 module.exports = router;
