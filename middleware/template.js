@@ -1,7 +1,6 @@
 const art = require('art-template');
 const path = require('path');
 const config = require('../config');
-const he = require('he');
 const typeRegrx = /\.(atom|rss|json)$/;
 // const unsupportedRegrx = /\.json$/;
 
