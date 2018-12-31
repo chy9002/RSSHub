@@ -1,10 +1,10 @@
-这是个[RSSHub](https://github.com/DIYgod/RSSHub)保留Json格式的版本。
+这是个[RSSHub](https://github.com/DIYgod/RSSHub)保留 Json 格式的版本。
 
-有对应的Docker.
+有对应的 Docker.
 
-该fork根据我心情不定期从原repo不定期更新，如果原repo出现的大规模改动我一时半会儿照顾不过来，那该fork就会停止更新。
+该 fork 根据我心情不定期从原 repo 不定期更新，如果原 repo 出现的大规模改动我一时半会儿照顾不过来，那该 fork 就会停止更新。
 
-_以下是原版RSSHub的License声明，予以保留。_
+_以下是原版 RSSHub 的 License 声明，予以保留。_
 
 ## Author
 
