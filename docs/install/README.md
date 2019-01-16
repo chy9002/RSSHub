@@ -286,6 +286,12 @@ gcloud app deploy
 
 `LOGGER_LEVEL`: 指明输出到 console 和日志文件的日志的最大[等级](https://github.com/winstonjs/winston#logging-levels)，默认 `info`
 
+`PROXY_PROTOCOL`: 使用 proxy 来访问的协议, 目前只支持 socks, socks4,socks4a,socks5,socks5h
+
+`PROXY_HOST`: proxy 的域名
+
+`PROXY_PORT`: proxy 的端口
+
 ### 用户认证
 
 `protected_route.js` 内的路由将启用 HTTP Basic Authentication 认证.
@@ -322,7 +328,7 @@ gcloud app deploy
 
     -   `TELEGRAM_TOKEN`: Telegram 机器人 token
 
--   `gitHhub`: [申请地址](https://github.com/settings/tokens)
+-   `github`: [申请地址](https://github.com/settings/tokens)
 
     -   `GITHUB_ACCESS_TOKEN`: GitHub Access Token
 
