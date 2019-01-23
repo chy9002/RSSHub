@@ -4,6 +4,12 @@
 
 该 fork 根据我心情不定期从原 repo 不定期更新，如果原 repo 出现的大规模改动我一时半会儿照顾不过来，那该 fork 就会停止更新。
 
+## JSON Feed Update:
+
+### 2019.01.23
+
+  * 在JSON Feed 添加了支持附件支持。
+
 _以下是原版 RSSHub 的 License 声明，予以保留。_
 
 ## Author
