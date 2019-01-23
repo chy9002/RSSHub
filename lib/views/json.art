@@ -27,7 +27,7 @@
             "attachments": [
                 {{ if $value.enclosure_url }}
                 {
-                    "url": {{ $value.enclosure_url }}
+                    "url": "{{ $value.enclosure_url }}"
                     {{ if $value.enclosure_type }},"mime_type": "{{ $value.enclosure_type }}"{{ /if }}
                     {{ if $value.enclosure_length }},"size_in_bytes": {{ $value.enclosure_length }}{{ /if }}
                 }
