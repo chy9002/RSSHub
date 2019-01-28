@@ -8,7 +8,7 @@
 
 ### 2019.01.23
 
-  * 在JSON Feed 添加了附件支持。
+-   在 JSON Feed 添加了附件支持。
 
 _以下是原版 RSSHub 的 License 声明，予以保留。_
 
