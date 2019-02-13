@@ -15,7 +15,7 @@ RUN if [ "$USE_CHINA_NPM_REGISTRY" = 1 ]; then \
   echo 'use npm mirror'; npm config set registry https://registry.npm.taobao.org; \
   fi;
 
-ARG PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1;
+ARG PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=0;
 
 RUN if [ "$PUPPETEER_SKIP_CHROMIUM_DOWNLOAD" = 0 ]; then \
   apt-get install -y wget --no-install-recommends \
