@@ -1893,6 +1893,16 @@ https://rsshub.app/**nuist**/`bulletin` 或 https://rsshub.app/**nuist**/`bullet
 
 </route>
 
+### 上海大学
+
+<route name="上海大学教务处通知公告" author="tuxinghuan" example="/shu/jwc/notice" path="/university/shu/jwc/:type?" :paramsDesc="['消息类型,默认为`notice`']">
+
+| 通知通告 | 新闻 |
+| -------- | ---- |
+| notice   | news |
+
+</route>
+
 ### 同济大学
 
  <route name="同济大学软件学院通知" author="sgqy" example="/tju/sse/xwdt" path="/tju/sse/:type?" :paramsDesc="['通知类型. 默认为 `xwdt`']">
@@ -3038,6 +3048,10 @@ board 和 build 可在[这里](http://api.ineal.me/tss/status)查看
 | (空) | company | business | ent  | technology | idonews |
 
 </route>
+
+### instapaper
+
+<route name="个人分享" author="LogicJake" example="/instapaper/person/viridiano" path="/instapaper/person"/>
 
 ### UI 中国
 
