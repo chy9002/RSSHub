@@ -1,5 +1,5 @@
-FROM node:10.15.3-slim
-LABEL MAINTAINER https://github.com/chy9002/RSSHub/
+FROM node:10.15-slim
+LABEL MAINTAINER https://github.com/DIYgod/RSSHub/
 
 RUN apt-get update && apt-get install -yq libgconf-2-4 apt-transport-https
 
