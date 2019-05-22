@@ -1,4 +1,8 @@
 这是个[RSSHub](https://github.com/DIYgod/RSSHub)保留 Json 格式的版本。
+<p align="center">
+<img src="https://i.loli.net/2019/04/23/5cbeb7e41414c.png" alt="RSSHub" width="100">
+</p>
+<h1 align="center">RSSHub</h1>
 
 有对应的 Docker.
 
@@ -67,7 +71,7 @@ RSSHub 是采用 MIT 许可的开源项目，使用完全免费。 但是随着�
 
 ## 一次性赞助
 
-我们通过以下方式接受赞助 :
+我们通过以下方式接受赞助:
 
 -   [微信支付](https://i.loli.net/2019/03/23/5c950ebbc373e.png)
 -   [支付宝](https://i.loli.net/2019/03/23/5c950ebbc980e.png)
