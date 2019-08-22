@@ -4,6 +4,12 @@ pageClass: routes
 
 # 出行旅游
 
+## 12306
+
+### 最新动态
+
+<Route author="LogicJake" example="/12306/zxdt" path="/12306/zxdt/:id?" :paramsDesc="['铁路局id，可在 URL 中找到，不填默认显示所有铁路局动态']"/>
+
 ## All the Flight Deals
 
 ### 特价机票
@@ -37,11 +43,44 @@ IATA 国际航空运输协会机场代码, 参见[维基百科 国际航空运�
 
 ### 展览信息
 
-<Route author="sinchang" example="/imuseum/shanghai/all" path="/imuseum/:city/:type" :paramsDesc="['如 shanghai, beijing', '不填则默认为 `all`']">
+<Route author="sinchang" example="/imuseum/shanghai/all" path="/imuseum/:city/:type?" :paramsDesc="['如 shanghai, beijing', '不填则默认为 `all`']">
 
 | 全部 | 最新   | 热门 | 即将结束 | 即将开始 | 已结束   |
 | ---- | ------ | ---- | -------- | -------- | -------- |
 | all  | latest | hot  | end_soon | coming   | outdated |
+
+</Route>
+
+## 飞客茶馆
+
+### 优惠信息
+
+<Route author="howel52" example="/flyertea/preferential" path="/flyertea/preferential" />
+
+### 信用卡
+
+<Route author="nicolaszf" example="/flyertea/creditcard/zhongxin" path="/flyertea/creditcard/:bank" :paramsDesc="['信用卡板块各银行的拼音简称']">
+
+| 信用卡模块 | bank          |
+| ---------- | ------------- |
+| 国内信用卡 | creditcard    |
+| 浦发银行   | pufa          |
+| 招商银行   | zhaoshang     |
+| 中信银行   | zhongxin      |
+| 交通银行   | jiaotong      |
+| 中国银行   | zhonghang     |
+| 工商银行   | gongshang     |
+| 广发银行   | guangfa       |
+| 农业银行   | nongye        |
+| 建设银行   | jianshe       |
+| 汇丰银行   | huifeng       |
+| 民生银行   | mingsheng     |
+| 兴业银行   | xingye        |
+| 花旗银行   | huaqi         |
+| 无卡支付   | wuka          |
+| 投资理财   | 137           |
+| 网站权益汇 | 145           |
+| 境外信用卡 | intcreditcard |
 
 </Route>
 

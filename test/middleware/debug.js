@@ -1,3 +1,5 @@
+process.env.NODE_NAME = 'mock';
+
 const supertest = require('supertest');
 const { server } = require('../../lib/index');
 const request = supertest(server);
@@ -34,6 +36,9 @@ describe('debug', () => {
                 .html()
                 .trim();
             switch (key) {
+                case '节点名:':
+                    expect(value).toBe('mock');
+                    break;
                 case 'git hash:':
                     expect(value).toBe(gitHash);
                     break;
@@ -41,6 +46,9 @@ describe('debug', () => {
                     expect(value).toBe('6');
                     break;
                 case '热门路由:':
+                    expect(value).toBe(`5&nbsp;&nbsp;/test/:id<br>`);
+                    break;
+                case '热门路径:':
                     expect(value).toBe(`3&nbsp;&nbsp;/test/1<br>2&nbsp;&nbsp;/test/2<br>1&nbsp;&nbsp;/<br>`);
                     break;
                 case '热门IP:':
