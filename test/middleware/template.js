@@ -1,5 +1,5 @@
 const supertest = require('supertest');
-const { server } = require('../../lib/index');
+const server = require('../../lib/index');
 const request = supertest(server);
 const Parser = require('rss-parser');
 const parser = new Parser();
@@ -60,12 +60,21 @@ describe('template', () => {
     it(`.json`, async () => {
         const response = await request.get('/test/1.json');
         expect(response.status).toBe(404);
-        expect(response.text).toMatch(/RSSHub 发生了一些意外: <pre>Error: <b>JSON output had been removed/);
+        expect(response.text).toMatch(/Error: <b>JSON output had been removed/);
     });
 
     it(`long title`, async () => {
         const response = await request.get('/test/long');
         const parsed = await parser.parseString(response.text);
         expect(parsed.items[0].title.length).toBe(103);
+    });
+
+    it(`enclosure`, async () => {
+        const response = await request.get('/test/enclosure');
+        const parsed = await parser.parseString(response.text);
+        expect(parsed.itunes.author).toBe('DIYgod');
+        expect(parsed.items[0].enclosure.url).toBe('https://github.com/DIYgod/RSSHub/issues/1');
+        expect(parsed.items[0].enclosure.length).toBe('3661');
+        expect(parsed.items[0].itunes.duration).toBe('1:01:01');
     });
 });
