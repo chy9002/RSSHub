@@ -27,6 +27,20 @@ pageClass: routes
 
 </Route>
 
+## AEON
+
+<Route author="emdoe" example="/aeon/ideas" path="/aeon/:category" :paramsDesc="['类别']"></Route>
+
+支持以文体分类：
+| Ideas | Essays | Videos |
+| ----- | ------ | ------ |
+| ideas | essays | videos |
+
+同样支持以话题分类：
+| Culture | Philosophy | Psychology | Society | Science |
+| ------- | ---------- | ---------- | ------- | ------- |
+| culture | philosophy | psychology | society | science |
+
 ## BOF
 
 ### 首页
@@ -417,6 +431,12 @@ pageClass: routes
 
 <Route author="kt286" example="/kkj/news" path="/kkj/news"/>
 
+## 快知
+
+### 话题
+
+<Route author="hoilc" example="/kzfeed/topic/KklZRd9a04OgA" path="/kzfeed/topic/:id" :paramsDesc="['话题ID, 可以从话题URL中获得']"/>
+
 ## 老司机
 
 ### 首页
@@ -458,6 +478,12 @@ pageClass: routes
 ### 新闻
 
 <Route author="crispgm" example="/nogizaka46/news" path="/nogizaka46/news" />
+
+## Nautilus
+
+### 话题
+
+<Route author="emdoe" example="/nautilus/topic/Art" path="/nautilus/topic/:tid" :paramsDesc="['话题 id, 可在页面上方 TOPICS 栏目处找到']"/>
 
 ## 派代
 
@@ -582,6 +608,10 @@ pageClass: routes
 ### 专题内文章更新
 
 <Route author="SunShinenny" example="/sspai/topic/250" path="/sspai/topic/:id"  :paramsDesc="['专题 id，可在专题主页URL中找到']"/>
+
+### 标签订阅
+
+<Route author="Jeason0228" example="/sspai/tag/apple" path="/sspai/tag/:keyword" :paramsDesc="['关键词']"/>
 
 ## 世界卫生组织
 

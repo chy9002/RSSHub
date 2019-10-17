@@ -289,6 +289,10 @@ type 为 all 时，category 参数不支持 cost 和 free
 
 <Route author="kt286" example="/sse/convert/beginDate=2018-08-18&endDate=2019-08-18&companyCode=603283&title=股份" path="/sse/convert/:query?" :paramsDesc="['筛选条件，见示例']"/>
 
+### 科创板项目动态
+
+<Route author="Jeason0228" example="/sse/renewal" path="/sse/renewal"/>
+
 ## 深圳证券交易所
 
 ### 上市公告-可转换债券
@@ -316,6 +320,12 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 吐槽新帖
 
 <Route author="Qixingchen" example="/tucaoqq/post/28564/CdRI0728" path="/tucaoqq/post/:project/:key" :paramsDesc="['产品 ID', '产品密钥']"/>
+
+## 腾讯新闻较真查证平台
+
+### 最新辟谣
+
+<Route author="hoilc" example="/factcheck" path="/factcheck"/>
 
 ## 天津产权交易中心
 
