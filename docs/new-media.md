@@ -125,6 +125,12 @@ pageClass: routes
 
 <Route author="Cerebrater" example="/matters/author/az" path="/matters/author/:uid" :paramsDesc="['作者 id，可在作者主頁的 URL 找到']"/>
 
+## Nautilus
+
+### 话题
+
+<Route author="emdoe" example="/nautilus/topic/Art" path="/nautilus/topic/:tid" :paramsDesc="['话题 id, 可在页面上方 TOPICS 栏目处找到']"/>
+
 ## Readhub
 
 ### 分类
@@ -277,11 +283,19 @@ pageClass: routes
 
 <Route author="emdoe" example="/plainlaw/archives" path="/plainlaw/archives"/>
 
-## 观察者风闻话题
+## 观察者网-中国关怀 全球视野
+
+### 观察者首页
+
+<Route author="Jeason0228" example="/guanchazhe/index/all" path="/guanchazhe/index/:type" :paramsDesc="['新闻汇总:默认home输出头条+3列新闻,others则为滚动新闻+热点+观察者付费,all则包括以上']" />
 
 ### 观察者风闻话题
 
 <Route author="occupy5" example="/guanchazhe/topic/113" path="/guanchazhe/topic/:id" :paramsDesc="['话题id， 可在URL中找到']" />
+
+### 个人主页文章
+
+<Route author="Jeason0228" example="/guanchazhe/personalpage/243983" path="/guanchazhe/personalpage/:uid" :paramsDesc="['用户id， 可在URL中找到']" />
 
 ## 果壳网
 
@@ -311,7 +325,7 @@ pageClass: routes
 
 ### 标签，栏目，分类
 
-<Route author="WenhuWee emdoe SivaGao HenryQW" example="/qdaily/column/59" path="/qdaily/:type/:id" :paramsDesc="['类型，见下表', '对应 id，可在 URL 找到']">
+<Route author="WenhuWee emdoe SivaGao HenryQW" example="/qdaily/column/59" path="/qdaily/:type/:id" :paramsDesc="['类型，见下表', '对应 id，可在 URL 找到']" radar="1">
 
 | 标签 | 栏目   | 分类       |
 | ---- | ------ | ---------- |
@@ -340,6 +354,10 @@ pageClass: routes
 <Route author="ciaranchen" example="/houxu/events" path="/houxu/events"/>
 
 ## 虎嗅
+
+### 首页资讯
+
+<Route author="HenryQW" example="/huxiu/article" path="/huxiu/article" />
 
 ### 标签
 
@@ -478,12 +496,6 @@ pageClass: routes
 ### 新闻
 
 <Route author="crispgm" example="/nogizaka46/news" path="/nogizaka46/news" />
-
-## Nautilus
-
-### 话题
-
-<Route author="emdoe" example="/nautilus/topic/Art" path="/nautilus/topic/:tid" :paramsDesc="['话题 id, 可在页面上方 TOPICS 栏目处找到']"/>
 
 ## 派代
 
@@ -856,6 +868,12 @@ pageClass: routes
 | default | hot  | new  |
 
 </Route>
+
+## 装备前线
+
+### 首页最新帖子
+
+<Route author="Jeason0228" example="/zfrontier/postlist/:byReplyTime" path="/zfrontier/postlist" :paramsDesc="['内容标签, 点击标签后地址栏有显示']"/>
 
 ## 紫竹张先生
 

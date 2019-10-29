@@ -71,6 +71,12 @@ pageClass: routes
 
 <Route author="fengkx" example="/one" path="/one"/>
 
+## Pocket
+
+### Trending
+
+<Route author="hoilc" example="/pocket/trending" path="/pocket/trending"/>
+
 ## SANS Institute
 
 ### 最新会议材料
@@ -91,10 +97,10 @@ board 和 build 可在[这里](http://api.ineal.me/tss/status)查看
 
 ### 最近更新
 
-<Route author="LogicJake" example="/wegene/newest" path="/wegene/newest"/>
+<Route author="LogicJake" example="/wegene/newest" path="/wegene/newest" radar="1"/>
 ### 栏目
 
-<Route author="LogicJake" example="/wegene/column/all/all" path="/wegene/column/:type/:category" :paramsDesc="['栏目类型，all（全部项目） 或 weapp（专业版）','栏目分类']">
+<Route author="LogicJake" example="/wegene/column/all/all" path="/wegene/column/:type/:category" :paramsDesc="['栏目类型，all（全部项目） 或 weapp（专业版）','栏目分类']" radar="1">
 
 :::
 type 为 all 时，category 参数不支持 cost 和 free
@@ -224,6 +230,12 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 产品更新
 
 <Route author="junfengP" example="/mlhang" path="/mlhang" />
+
+## 每日生猪价格
+
+### 每日生猪价格更新
+
+<Route author="importcjj" example="/pork-price" path="/pork-price" />
 
 ## 米坛社区
 
@@ -396,3 +408,9 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 房源
 
 <Route author="DIYgod" example="/ziroom/room/sh/1/2/五角场" path="/ziroom/room/:city/:iswhole/:room/:keyword" :paramsDesc="['城市, 北京 bj; 上海 sh; 深圳 sz; 杭州 hz; 南京 nj; 广州 gz; 成都 cd; 武汉 wh; 天津 tj', '是否整租', '房间数', '关键词']"/>
+
+## はてな
+
+### はてな匿名ダイアリー - 人気記事アーカイブ
+
+<Route author="masakichi" example="/hatena/anonymous_diary/archive" path="/hatena/anonymous_diary/archive"/>
