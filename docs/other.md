@@ -65,6 +65,12 @@ pageClass: routes
 
 <Route author="brilon" example="/mobdata/report" path="/mobdata/report"/>
 
+## NOI 全国青少年信息学奥林匹克竞赛
+
+### 新闻
+
+<Route author="WenryXu" example="/noi" path="/noi"/>
+
 ## ONE · 一个
 
 ### 图片文字问答
@@ -310,6 +316,10 @@ type 为 all 时，category 参数不支持 cost 和 free
 ### 上市公告-可转换债券
 
 <Route author="Jeason0228" example="/szse/notice" path="/szse/notice"/>
+
+### 问询函件(全部/主板/中小企业板/创业板)
+
+<Route author="Jeason0228" example="/szse/inquire/navall" path="/szse/inquire/:type"  :paramsDesc="['tab选项,navall为全部,nav1为主板,nav2,为中小企业板,nav3位创业板']"/>
 
 ## 搜狗
 
