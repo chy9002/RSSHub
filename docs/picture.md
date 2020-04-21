@@ -44,6 +44,12 @@ pageClass: routes
 
 </Route>
 
+## GirlImg
+
+### album
+
+<Route author="junfengP" example="/girlimg/album" path="/girlimg/album/:tag?/:mode?" :paramsDesc="['过滤标签，在链接参数中&tab=部分，如：中国,BoLoLi','加载模式，留空为简单模式，获取20篇文章标题与封面；非空为详细模式，加载10篇文章内容']" />
+
 ## Google Doodles
 
 ### 更新
@@ -78,6 +84,12 @@ pageClass: routes
 -   过去一年:<https://rsshub.app/konachan/post/popular_recent/1y>
 
 </Route>
+
+## LoveHeaven
+
+### 漫画更新
+
+<Route author="hoilc" example="/loveheaven/update/kimetsu-no-yaiba" path="/loveheaven/update/:slug" :paramsDesc="['漫画 slug，可在漫画页面URL中找到，不包括开头的`manga-`，也不包括末尾的`.html`']" />
 
 ## nHentai
 
@@ -172,6 +184,16 @@ pageClass: routes
 | 妹子图 | 妹子图热榜 |
 | ------ | ---------- |
 | ooxx   | top-ooxx   |
+
+## 绝对领域
+
+### 图集文章
+
+<Route author="Kherrisan" example="/jdlingyu/tuji" path="/jdlingyu/:type" :paramsDesc="['分区名']"/>
+
+| 图集 | 文章 |
+| ---- | ---- |
+| tuji | as   |
 
 ## 妹子图
 

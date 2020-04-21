@@ -199,6 +199,12 @@ For instance, in https://www.leboncoin.fr/recherche/?**category=10&locations=Par
 
 <Route author="LogicJake" example="/weidian/goods/431508863" path="/weidian/goods/:id" :paramsDesc="['商铺 id']"/>
 
+## 消费者报道
+
+### 要闻
+
+<Route author="EsuRt" example="/ccreports/article" path="/ccreports"/>
+
 ## 小米
 
 ### 小米众筹
@@ -211,7 +217,7 @@ For instance, in https://www.leboncoin.fr/recherche/?**category=10&locations=Par
 
 ### 小米有品每日上新
 
-<Route author="xyqfer" example="/mi/youpin/new" path="/mi/youpin/new"/>
+<Route author="xyqfer DIYgod" example="/mi/youpin/new" path="/mi/youpin/new"/>
 
 ## 宜家 IKEA
 
