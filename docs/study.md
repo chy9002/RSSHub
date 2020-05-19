@@ -47,12 +47,12 @@ pageClass: routes
 
 | `:class` | 类型                             |
 | :------: | -------------------------------- |
-|    0     | Jeopardy[解题]                   |
-|    1     | Attack with Defense[AwD 攻防]    |
-|    2     | Robo Hacking Game[RHG AI 自动化] |
-|    3     | Real World[RW 真实世界]          |
-|    4     | King of The Hill[KoH 抢占山头]   |
-|    5     | Mix[混合]                        |
+|     0    | Jeopardy[解题]                   |
+|     1    | Attack with Defense[AwD 攻防]    |
+|     2    | Robo Hacking Game[RHG AI 自动化] |
+|     3    | Real World[RW 真实世界]          |
+|     4    | King of The Hill[KoH 抢占山头]   |
+|     5    | Mix[混合]                        |
 
 > class 以 <https://api.ctfhub.com/User_API/Event/getType> 的返回结果为准
 
@@ -281,3 +281,9 @@ pageClass: routes
 ### 最新
 
 <Route author="xyqfer" example="/icourse163/newest" path="/icourse163/newest" />
+
+## 中国人事考试网
+
+### 通知公告
+
+<Route author="nczitzk" example="/cpta/notice" path="/cpta/notice" />

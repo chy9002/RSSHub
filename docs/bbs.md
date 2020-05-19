@@ -8,7 +8,7 @@ pageClass: routes
 
 ### 串
 
-<Route author="zcx1218029121" example="/adnmb/20/1" path="/adnmb/:pid/page" :paramsDesc="['板块列表，见下表','页数， 1开始必填']" >
+<Route author="zcx1218029121" example="/adnmb/20" path="/adnmb/:pid" :paramsDesc="['板块 id 或者板块名称，例如`/adnmb/20`等价于`/adnmb/欢乐恶搞`，现有板块请参考下表']" >
 
 | 综合版 1 | 围炉 | 欢乐恶搞 | 速报 2 | 推理 | 跑团 | 技术宅 | 料理 | 猫版 | 音乐 | 考试 | 社畜 |
 | -------- | ---- | -------- | ------ | ---- | ---- | ------ | ---- | ---- | ---- | ---- | ---- |
@@ -117,6 +117,12 @@ pageClass: routes
 ### 帖子
 
 <Route author="xyqfer" example="/nga/post/18449558" path="/nga/post/:tid"  :paramsDesc="['帖子 id, 可在帖子 URL 找到']" radar="1"/>
+
+## RF 技术社区
+
+### 文章
+
+<Route author="nczitzk" example="/rf/article" path="/rf/article"/>
 
 ## Ruby China
 
@@ -230,6 +236,10 @@ pageClass: routes
 | 0        | 3        | 1    | 4    |
 
 </Route>
+
+### 校招日程
+
+<Route author="junfengP" example="/nowcoder/schedule" path="nowcoder/schedule/:propertyId?/:typeId?" :paramsDesc="['行业, 在控制台中抓取接口，可获得行业id，默认0', '类别，同上']" />
 
 ## 书友社区
 

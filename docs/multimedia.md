@@ -383,6 +383,12 @@ pageClass: routes
 
 <Route author="greatcodeeer" example="/pianyuan" path="/pianyuan" radar="1"/>
 
+## 飘花电影网
+
+### 今日热门
+
+<Route author="nczitzk" example="/piaohua/hot" path="/piaohua/hot" />
+
 ## 蜻蜓 FM
 
 ### 专辑
@@ -391,19 +397,17 @@ pageClass: routes
 
 ## 色花堂中文论坛
 
-### 原创 BT 电影
+### 分区帖子
 
 <Route author="qiwihui junfengP" example="/dsndsht23/36/368" path="/dsndsht23/:subforumid?/:type?" supportBT="1" :paramsDesc="['版块 id 或板块名称（见下表）, 为空默认高清中文字幕', '类型 id, 可在分区类型过滤后的 URL 中找到']">
+
+**原创 BT 电影**
 
 | 每日合集 | 国产原创 | 亚洲无码原创 | 亚洲有码原创 | 高清中文字幕 | 三级写真 | 亚洲名站有码 | VR 系列 | 欧美无码 | 动漫原创 | AI 换脸电影 | 原档收藏 WMV |
 | -------- | -------- | ------------ | ------------ | ------------ | -------- | ------------ | ------- | -------- | -------- | ----------- | ------------ |
 | mrhj     | gcyc     | yzwmyc       | yzymyc       | gqzwzm       | sjxz     | yzmzym       | vr      | omwm     | dmyc     | ai          | ydsc         |
 
-</Route>
-
-### 色花图片
-
-<Route author="junfengP" example="/dsndsht23/picture/hrxazp" path="/dsndsht23/picture/:subforumid" :paramsDesc="['子版块 id']">
+**色花图片**
 
 | 华人性爱自拍 | 华人街拍区 | 亚洲性爱 | 欧美性爱 | 卡通动漫 |
 | ------------ | ---------- | -------- | -------- | -------- |
@@ -467,9 +471,9 @@ pageClass: routes
 
 <Route author="minosss" example="/gaoqingla" path="/gaoqingla/:tag?" :paramsDesc="['标签tag，视频清晰度']" />
 
-| 全部 | 蓝光   | 1080P | 720P | 3D  | WEB-DL |
-| ---- | ------ | ----- | ---- | --- | ------ |
-| 留空 | bluray | 1080p | 720p | 3d  | webdl  |
+| 全部 | 蓝光   | 1080P | 720P | 3D | WEB-DL |
+| ---- | ------ | ----- | ---- | -- | ------ |
+| 留空 | bluray | 1080p | 720p | 3d | webdl  |
 
 ## 中国广播
 
