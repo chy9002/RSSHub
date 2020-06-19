@@ -147,7 +147,7 @@ $ npm start
 $ yarn start
 ```
 
-或使用 [PM2](https://pm2.io/doc/zh/runtime/quick-start/)
+或使用 [PM2](https://pm2.keymetrics.io/docs/usage/quick-start/)
 
 ```bash
 $ pm2 start lib/index.js --name rsshub
@@ -351,7 +351,7 @@ RSSHub 支持 `memory` 和 `redis` 两种缓存方式
 
 ### 访问控制配置
 
-RSSHub 支持使用访问密钥 / 码，白名单和黑名单三种方式进行访问控制。开启任意选项将会激活全局访问控制，没有访问权限将会导致访问被拒绝。
+RSSHub 支持使用访问密钥 / 码，白名单和黑名单三种方式进行访问控制。开启任意选项将会激活全局访问控制，没有访问权限将会导致访问被拒绝。同时可以通过 `ALLOW_LOCALHOST: true` 赋予所有本地 IP 访问权限。
 
 #### 黑白名单
 

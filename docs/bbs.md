@@ -10,9 +10,9 @@ pageClass: routes
 
 <Route author="zcx1218029121" example="/adnmb/20" path="/adnmb/:pid" :paramsDesc="['板块 id 或者板块名称，例如`/adnmb/20`等价于`/adnmb/欢乐恶搞`，现有板块请参考下表']" >
 
-| 综合版 1 | 围炉 | 欢乐恶搞 | 速报 2 | 推理 | 跑团 | 技术宅 | 料理 | 猫版 | 音乐 | 考试 | 社畜 |
-| -------- | ---- | -------- | ------ | ---- | ---- | ------ | ---- | ---- | ---- | ---- | ---- |
-| 4        | 120  | 20       | 121    | 11   | 111  | 30     | 32   | 40   | 35   | 56   | 110  |
+| 时间线 | 综合版 1 | 围炉 | 欢乐恶搞 | 速报 2 | 推理 | 跑团 | 技术宅 | 料理 | 猫版 | 音乐 | 考试 | 社畜 |
+| ------ | -------- | ---- | -------- | ------ | ---- | ---- | ------ | ---- | ---- | ---- | ---- | ---- |
+| -1     | 4        | 120  | 20       | 121    | 11   | 111  | 30     | 32   | 40   | 35   | 56   | 110  |
 
 | 科学 | 文学 | 创意 | 姐妹 1 | 数码 | 女装 | 日记 | 圈内 | 都市怪谈 | 买买买 | 动画 | 漫画 | 美漫 | 国漫 | 小说 |
 | ---- | ---- | ---- | ------ | ---- | ---- | ---- | ---- | -------- | ------ | ---- | ---- | ---- | ---- | ---- |
@@ -164,6 +164,10 @@ pageClass: routes
 
 <Route author="kt286" example="/v2ex/post/584403" path="/v2ex/post/:postid" :paramsDesc="['帖子ID，在 URL 可以找到']"/>
 
+### 标签
+
+<Route author="liyefox" example="/v2ex/tab/hot" path="/v2ex/tab/:tabid" :paramsDesc="['tab标签ID,在 URL 可以找到']"/>
+
 ## 电鸭社区
 
 ### 工作机会
@@ -240,6 +244,12 @@ pageClass: routes
 ### 校招日程
 
 <Route author="junfengP" example="/nowcoder/schedule" path="nowcoder/schedule/:propertyId?/:typeId?" :paramsDesc="['行业, 在控制台中抓取接口，可获得行业id，默认0', '类别，同上']" />
+
+## 三星盖乐世社区
+
+### 最新帖子
+
+<Route author="nczitzk" example="/samsungmembers/latest" path="/samsungmembers/latest"/>
 
 ## 书友社区
 
