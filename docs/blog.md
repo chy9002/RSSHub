@@ -46,6 +46,12 @@ pageClass: routes
 
 <Route author="DIYgod" example="/blogs/diygod/gk" path="/blogs/diygod/gk"/>
 
+## JustRun
+
+### JustRun
+
+<Route author="nczitzk" example="/justrun" path="/justrun"/>
+
 ## LaTeX 开源小屋
 
 ### 首页
@@ -65,6 +71,10 @@ pageClass: routes
 ### Essays
 
 <Route author="Maecenas" example="/blogs/paulgraham" path="/blogs/paulgraham"/>
+
+## WordPress
+
+<Route author="Lonor" example="/blogs/wordpress/lawrence.code.blog" path="/blogs/wordpress/:domain/:https?" :paramsDesc="['WordPress 博客域名', '默认 https 协议。填写 `http`或`https`']"/>
 
 ## 阿里云系统组技术博客
 
@@ -110,9 +120,7 @@ pageClass: routes
 
 ### 文章
 
-<Route author="prnake" example="/blogs/wang54" path="/blogs/wang54/:id?" :paramsDesc="['RSS抓取地址：https://wangwusiwj.blogspot.com/:id?，默认为2020']">
-
-</Route>
+<Route author="prnake" example="/blogs/wang54" path="/blogs/wang54/:id?" :paramsDesc="['RSS抓取地址：https://wangwusiwj.blogspot.com/:id?，默认为2020']"/>
 
 ## 王垠博客
 

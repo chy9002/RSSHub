@@ -4,6 +4,16 @@ pageClass: routes
 
 # 程序更新
 
+## AMD
+
+### 显卡驱动更新
+
+<Route author="ysc3839" example="/amd/graphicsdrivers/731F/C0" path="/amd/graphicsdrivers/:id/:rid?" :paramsDesc="['id', 'rid']">
+
+可从设备管理器查看 id 和 rid。如 `PCI\VEN_1002&DEV_731F&SUBSYS_05771043&REV_C1`，则 id 为 `731F`，rid 为 `C1`。
+
+</Route>
+
 ## Apkpure
 
 ### Versions
@@ -36,7 +46,7 @@ pageClass: routes
 
 ### 新的 Dropzone 动作
 
-<Route author="HenryQW" example="/aptonic/action" path="/aptonic/action"/>
+<Route author="HenryQW" example="/aptonic/action" path="/aptonic/action/:untested?" :paramsDesc="['填写任意值，将会同时包括非官方的 Dropzone 动作']"/>
 
 ## Bugly SDK
 
@@ -186,6 +196,12 @@ pageClass: routes
 
 见 [#playstation](/game.html#playstation)
 
+## Quicker
+
+### 版本更新
+
+<Route author="Cesaryuan" example="/quicker/update" path="/quicker/update"/>
+
 ## RSSHub
 
 ### 有新路由啦
@@ -217,6 +233,10 @@ pageClass: routes
 ### Changelog
 
 <Route author="cnzgray" example="/typora/changelog" path="/typora/changelog"/>
+
+### Dev Release Changelog
+
+<Route author="nczitzk" example="/typora/changelog-dev/macOS" path="/typora/changelog-dev/:os" :paramsDesc="['操作系统类型, 可选 `macOS` 或 `Windows` 与 `Linux`，默认为 `macOS`']"/>
 
 ## xclient.info
 
@@ -259,6 +279,12 @@ pageClass: routes
 ### app 更新
 
 <Route author="zytomorrow" example="/pgyer/:app" path="/pgyer/kz-test" :paramsDesc="['app为下载页最后的路径']" radar="1"/>
+
+## 腾讯柠檬 Lab
+
+### 柠檬精选 Mac Apps
+
+<Route author="HenryQW" example="/tencent/lemon" path="/tencent/lemon"/>
 
 ## 腾讯云移动直播 SDK
 

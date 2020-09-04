@@ -52,7 +52,7 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 ### UP 主投币视频
 
-<Route author="DIYgod" example="/bilibili/user/coin/2267573" path="/bilibili/user/coin/:uid/:disableEmbed?" :paramsDesc="['用户 id, 可在 UP 主主页中找到', '默认为开启内嵌视频, 任意值为关闭']"/>
+<Route author="DIYgod" example="/bilibili/user/coin/208259" path="/bilibili/user/coin/:uid/:disableEmbed?" :paramsDesc="['用户 id, 可在 UP 主主页中找到', '默认为开启内嵌视频, 任意值为关闭']"/>
 
 ### UP 主粉丝
 
@@ -244,11 +244,17 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 ### 会员购新品上架
 
-<Route author="DIYgod" example="/bilibili/mall/new" path="/bilibili/mall/new" />
+<Route author="DIYgod" example="/bilibili/mall/new/1" path="/bilibili/mall/new/:category?" :paramsDesc="['分类，默认全部，见下表']">
+
+| 全部 | 手办 | 魔力赏 | 周边 | 游戏 |
+| ---- | ---- | ------ | ---- | ---- |
+| 0    | 1    | 7      | 3    | 6    |
+
+</Route>
 
 ### 会员购作品
 
-<Route author="DIYgod" example="/bilibili/mall/ip/1_5883" path="/bilibili/mall/ip/:id" :paramsDesc="['作品 id, 可在作品列表页 URL 中找到']"/>
+<Route author="DIYgod" example="/bilibili/mall/ip/0_3000294" path="/bilibili/mall/ip/:id" :paramsDesc="['作品 id, 可在作品列表页 URL 中找到']"/>
 
 ### 排行榜
 
@@ -316,15 +322,32 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 
 ::: tip 提示
 
-官方提供了用户时间线 RSS: `https://**:instance**/users/**:username**.atom` 或 `https://**:instance**/users/**:username**.rss`
+通常来说，各实例提供用户时间线的订阅源，如下：
 
-例如：<https://pawoo.net/users/pawoo_support.atom> 或 <https://pawoo.net/users/pawoo_support.rss>
+-   RSS: `https://**:instance**/users/**:username**.rss`
+-   Atom: ~~`https://**:instance**/users/**:username**.atom`~~ (仅 pawoo.net)
+
+例如：<https://pawoo.net/users/pawoo_support.rss> 或 <https://pawoo.net/users/pawoo_support.atom>
+
+上述订阅源的内容不包括用户的转嘟。RSSHub 提供基于 Mastodon API 的订阅源，但需要您在某个 Mastodon 实例申请 API，并对 RSSHub 实例进行配置。详情见部署页面的配置模块。
 
 :::
 
-### 实例公共时间线
+### 用户公共时间线
+
+<Route author="notofoe" example="/mastodon/acct/CatWhitney@mastodon.social/statuses" path="/mastodon/acct/:acct/statuses/:only_media?" :paramsDesc="['Webfinger account URI, 形如 `user@host`', '是否只显示包含媒体（图片或视频）的推文, 默认置空为否, 任意值为是']"/>
+
+### 实例公共时间线（本站）
 
 <Route author="hoilc" example="/mastodon/timeline/pawoo.net/true" path="/mastodon/timeline/:site/:only_media?" :paramsDesc="['实例地址, 仅域名, 不包括`http://`或`https://`协议头', '是否只显示包含媒体（图片或视频）的推文, 默认置空为否, 任意值为是']"/>
+
+### 实例公共时间线（跨站）
+
+<Route author="hoilc" example="/mastodon/remote/pawoo.net/true" path="/mastodon/remote/:site/:only_media?" :paramsDesc="['实例地址, 仅域名, 不包括`http://`或`https://`协议头', '是否只显示包含媒体（图片或视频）的推文, 默认置空为否, 任意值为是']"/>
+
+### 用户公共时间线（备用）
+
+<Route author="notofoe" example="/mastodon/account_id/mastodon.social/23634/statuses/only_media" path="/mastodon/account/:site/:account_id/statuses/:only_media?" :paramsDesc="['实例地址, 仅域名, 不包括`http://`或`https://`协议头', '用户 ID. 登录实例后, 搜索用户并进入用户页, 在地址中可以找到这串数字', '是否只显示包含媒体（图片或视频）的推文, 默认置空为否, 任意值为是']"/>
 
 ## piapro
 
@@ -335,6 +358,12 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 ### 全站最新作品
 
 <Route author="hoilc" example="/piapro/public/music/miku/2" path="/piapro/public/:type/:tag?/:category?" :paramsDesc="['作品类别, 可选`music`,`illust`,`text`','标签, 即 URL 中`tag`参数','分类 ID, 即 URL 中 `categoryId` 参数']"/>
+
+## Picuki
+
+### 用户
+
+<Route author="hoilc" example="/picuki/profile/stefaniejoosten" path="/picuki/profile/:id/:displayVideo?" :paramsDesc="['Instagram 用户 id','是否显示视频，任意值为是，留空为否']" radar="1" />
 
 ## pixiv
 
@@ -374,17 +403,38 @@ Tiny Tiny RSS 会给所有 iframe 元素添加 `sandbox="allow-scripts"` 属性�
 :::
 </Route>
 
+## pixiv-fanbox
+
+<Route author="sgqy" example="/fanbox/otomeoto" path="/fanbox/:user?" :paramsDesc="['用户名, 可在用户主页 URL 中找到. 默认为官方资讯']"/>
+::: warning 付费墙注意
+
+由于 fanbox 专为付费用户设计，要查看已经付费的内容只能自建。
+
+自建设置：环境变量`FANBOX_SESSION_ID`对应 cookies 中的`FANBOXSESSID`。
+
+:::
+
+## Popi 提问箱
+
+### 提问箱新回答
+
+<Route author="AgFlore" example="/popiask/popi6666" path="/popiask/:sharecode/:pagesize?" :paramsDesc="['提问箱 ID', '查看条数（默认为 20）']" radar="1"/>
+
 ## Soul
 
 ### 瞬间更新
 
-<Route author="ImSingee" example="/soul/Y2w2aTNWQVBLOU09" path="/soul:id" :paramsDesc="['用户 id, 分享用户主页时的 URL 的 userIdEcpt 参数']" radar="1"></Route>
+<Route author="ImSingee" example="/soul/Y2w2aTNWQVBLOU09" path="/soul/:id" :paramsDesc="['用户 id, 分享用户主页时的 URL 的 userIdEcpt 参数']" radar="1"></Route>
+
+### 热门瞬间
+
+<Route author="BugWriter2" example="/soul/posts/hot" path="/soul/posts/hot" radar="1"></Route>
 
 ## Telegram
 
 ### 频道
 
-<Route author="DIYgod" example="/telegram/channel/awesomeDIYgod" path="/telegram/channel/:username" :paramsDesc="['频道 username']" radar="1">
+<Route author="DIYgod" example="/telegram/channel/awesomeDIYgod/%23DIYgod的豆瓣动态" path="/telegram/channel/:username/:searchQuery?" :paramsDesc="['频道 username', '搜索关键词, 如需搜索 tag 请用 `%23` 替代 `#`']" radar="1">
 
 ::: tip 提示
 
@@ -778,7 +828,11 @@ rule
 
 ### 博主
 
-<Route author="DIYgod iplusx" example="/weibo/user/1195230310" path="/weibo/user/:uid/:displayVideo?" :paramsDesc="['用户 id, 博主主页打开控制台执行 `$CONFIG.oid` 获取', '是否直接显示微博视频, 缺省 `1` 显示, 若不需要显示则填 `0` ']" anticrawler="1" radar="1"/>
+<Route author="DIYgod iplusx" example="/weibo/user/1195230310" path="/weibo/user/:uid/:displayVideo?" :paramsDesc="['用户 id, 博主主页打开控制台执行 `$CONFIG.oid` 获取', '是否直接显示微博视频, 缺省 `1` 显示, 若不需要显示则填 `0` ']" anticrawler="1" radar="1">
+
+部分博主仅登录可见，不支持订阅，可以通过打开 `https://m.weibo.cn/u/:uid` 验证
+
+</Route>
 
 ### 关键词
 
@@ -816,6 +870,22 @@ rule
 
 <Route author="hillerliao" example="/xueqiu/hots" path="/xueqiu/hots"/>
 
+## 悟空问答
+
+### 用户动态
+
+<Route author="nczitzk" example="/wukong/user/5826687196" path="/wukong/user/:id/:type?" :paramsDesc="['用户ID，可在用户页 URL 中找到', '类型，可选 `dongtai` 即 动态，`answers` 即 回答，`questions` 即 提问，默认为 `dongtai`']">
+
+::: tip 注意
+
+用户的动态是一定时间范围内用户提出的问题和作出的回答，距离现在时间较久的问题和回答不会出现，此时选择 `dongtai` 用户动态是会缺失的。
+
+同理选择 `answers` 和 `questions` 作为参数时，对于没有提出过问题和作出过回答的用户，其内容也会相应缺失。
+
+:::
+
+</Route>
+
 ## 小红书
 
 ### 用户笔记和专辑
@@ -829,6 +899,25 @@ rule
 ### 专辑
 
 <Route author="lotosbin" example="/xiaohongshu/board/5db6f79200000000020032df" path="/xiaohongshu/board/:board_id" :paramsDesc="['board_id']" />
+
+## 新榜
+
+::: warning 注意
+部署时需要配置 NEWRANK_COOKIE，具体见部署文档
+请勿过高频抓取，新榜疑似对每天调用 token 总次数进行了限制，超限会报错
+:::
+
+### 微信公众号
+
+<Route author="lessmoe" example="/newrank/wechat/chijiread" path="/newrank/wechat/:wxid" :paramsDesc="['微信号，若微信号与新榜信息不一致，以新榜为准']" anticrawler="1"/>
+
+### 抖音短视频
+
+<Route author="lessmoe" example="/newrank/douyin/110266463747" path="/newrank/douyin/:dyid" :paramsDesc="['抖音ID，可在新榜账号详情 URL 中找到']" anticrawler="1"/>
+
+::: warning 注意
+免费版账户抖音每天查询次数 20 次，如需增加次数可购买新榜会员或等待未来多账户支持
+:::
 
 ## 知乎
 

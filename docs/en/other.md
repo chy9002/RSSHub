@@ -51,6 +51,12 @@ Official Website: [https://www.ssm.gov.mo/apps1/PreventWuhanInfection/en.aspx](h
 
 <RouteEn author="Gnnng" example="/coronavirus/sg-moh" path="/coronavirus/sg-moh"/>
 
+## Darwin Awards
+
+### Articles
+
+<Route author="zoenglinghou" example="/darwinawards/all" path="/darwinawards/all" />
+
 ## dcinside
 
 ### board
@@ -104,6 +110,12 @@ Official Website: [https://www.ssm.gov.mo/apps1/PreventWuhanInfection/en.aspx](h
 | ja       | en      |
 
 </RouteEn>
+
+## MITRE
+
+### All Publications
+
+<Route author="sbilly" example="/mitre/publications" path="/mitre/publications" />
 
 ## Parcel Tracking
 

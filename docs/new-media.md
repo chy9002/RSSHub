@@ -10,6 +10,20 @@ pageClass: routes
 
 <Route author="xfangbao" example="/199it" path="/199it" />
 
+### 分类
+
+<Route author="nczitzk" example="/199it/category/199itdata" path="/199it/category/:caty" :paramsDesc="['分类, 可在分类页 URL 中找到']">
+
+分类为单一路径，如 `http://www.199it.com/archives/category/199itdata` 则路由为 `/199it/category/199itdata`.
+
+分类包含多重路径，如 `http://www.199it.com/archives/category/emerging/5g` 则替换 `/` 为 `|`，即路由为 `/199it/category/emerging|5g`.
+
+</Route>
+
+### 标签
+
+<Route author="nczitzk" example="/199it/tag/数据早报" path="/199it/tag/:tag" :paramsDesc="['标签, 可在标签页 URL 中找到']"/>
+
 ## 36kr
 
 ### 资讯
@@ -162,11 +176,11 @@ pageClass: routes
 
 ### 热榜
 
-<Route author="immmortal" example="/ithome/ranking/1" path="/ithome/ranking/:type" :paramsDesc="['类别']">
+<Route author="immmortal luyuhuang" example="/ithome/ranking/24h" path="/ithome/ranking/:type" :paramsDesc="['类别']" radar="1">
 
-| 1             | 2    | 3        | 4    |
-| ------------- | ---- | -------- | ---- |
-| 24 小时阅读榜 | 周榜 | 7 天热评 | 月榜 |
+| 24h           | 7days    | monthly |
+| ------------- | -------- | ------- |
+| 24 小时阅读榜 | 7 天最热 | 月榜    |
 
 </Route>
 
@@ -179,6 +193,20 @@ pageClass: routes
 ### 并购事件
 
 <Route author="xyqfer" example="/itjuzi/merge" path="/itjuzi/merge"/>
+
+## Kotaku
+
+### Story
+
+<Route author="CYTMWIA" example="/kotaku/story/news" path="/kotaku/story/:type" :paramsDesc="['Story类型']">
+
+可在 url 中找到，例如`https://kotaku.com/c/news`和`https://kotaku.com/c/kotaku-east`中的`news`和`kotaku-east`
+
+注意，无论是`news`还是`kotaku-east`之前都有`/c/`
+
+所以，如果您把`https://kotaku.com/latest`中的`latest`填入，该路由并不会正常工作
+
+</Route>
 
 ## Krankenkassen 德国新闻社卫健新闻
 
@@ -219,6 +247,7 @@ pageClass: routes
 ### 首页
 
 <Route author="EsuRt" example="/mittrchina/article" path="/mittrchina"/>
+
 ## Nautilus
 
 ### 话题
@@ -276,6 +305,42 @@ pageClass: routes
 ### 最新文章
 
 <Route author="kt286" example="/sixthtone/news" path="/sixthtone/news"/>
+
+## SocialBeta
+
+### 首页
+
+<Route author="nczitzk" example="/socialbeta/home" path="/socialbeta/home"/>
+
+### 案例
+
+<Route author="nczitzk" example="/socialbeta/hunt" path="/socialbeta/hunt"/>
+
+## Soomal
+
+### 话题
+
+<Route author="zoenglinghou" example="/soomal/topics/最新文章" path="/soomal/topics/:category/:language?" :paramsDesc="['话题，可在顶部菜单找到对应名称', '语言，默认为简体中文']">
+
+-   可选语言：
+
+| 简体中文 | 正体中文 | 英语 |
+| -------- | -------- | ---- |
+| zh       | zh_tw    | en   |
+
+-   可选话题（按语言分类）：
+
+| 语言     |          |       |          |          |          |              |
+| -------- | -------- | ----- | -------- | -------- | -------- | ------------ |
+| 简体中文 | 最新文章 | 科普  | 测评报告 | 发烧入门 | 摄影入门 | 古典音乐入门 |
+| 正体中文 | 最新文章 | 科普  | 測評報告 | 發燒入門 | 攝影入門 | 古典音樂入門 |
+| 英语     | Phone    | Audio | Album    | Review   |          |              |
+
+-   Soomal 提供官方 RSS 订阅
+    -   Soomal 网站更新：<http://www.soomal.com/doc/101.rss.xml>
+    -   Soomal 论坛与留言系统的更新：<http://www.soomal.com/bbs/101.rss.xml>
+
+</Route>
 
 ## The Verge
 
@@ -428,6 +493,18 @@ Supported sub-sites:
 ### 标签
 
 <Route author="LogicJake" example="/cyzone/label/创业邦周报" path="/cyzone/label/:name" :paramsDesc="['标签名称']"/>
+
+## 电商报
+
+### 分区
+
+<Route author="FlashWingShadow" example="/dsb/area/lingshou" path="/dsb/area/:area" :paramsDesc="['分区']"/>
+
+area 分区选项
+
+| 零售     | 物流  | O2O | 金融    | B2B | 人物  | 跨境    | 行业观察 |
+| -------- | ----- | --- | ------- | --- | ----- | ------- | -------- |
+| lingshou | wuliu | O2O | jinrong | B2B | renwu | kuajing | guancha  |
 
 ## 电商在线
 
@@ -641,6 +718,20 @@ Supported sub-sites:
 
 <Route author="nczitzk" example="/jinse/lives" path="/jinse/lives"/>
 
+### 头条
+
+<Route author="nczitzk" example="/jinse/timeline" path="/jinse/timeline"/>
+
+### 分类
+
+<Route author="nczitzk" example="/jinse/catalogue/zhengce" path="/jinse/catalogue/:caty" :paramsDesc="['分类名，参见下表']">
+
+| 政策    | 行情         | DeFi | 矿业  | 以太坊 2.0 | 产业     | IPFS | 技术 | 百科  | 研报          |
+| ------- | ------------ | ---- | ----- | ---------- | -------- | ---- | ---- | ----- | ------------- |
+| zhengce | fenxishishuo | defi | kuang | 以太坊 2.0 | industry | IPFS | tech | baike | capitalmarket |
+
+</Route>
+
 ## 鲸跃汽车
 
 ### 首页
@@ -683,6 +774,12 @@ Supported sub-sites:
 
 <Route author="WenryXu" example="/juesheng" path="/juesheng"/>
 
+## 看点快报
+
+### 首页
+
+<Route author="nczitzk" example="/kuaibao" path="/kuaibao/index"/>
+
 ## 快科技（原驱动之家）
 
 ### 最新新闻
@@ -724,6 +821,28 @@ Supported sub-sites:
 
 <Route author="xyqfer" example="/laosiji/hotshow/128" path="/laosiji/hotshow/:id" :paramsDesc="['节目 id']"/>
 
+## 梅花网
+
+### 作品
+
+<Route author="nczitzk" example="/meihua/shots/latest" path="/meihua/shots/:caty">
+
+| 最新   | 热门 | 推荐      |
+| ------ | ---- | --------- |
+| latest | hot  | recommend |
+
+</Route>
+
+### 文章
+
+<Route author="nczitzk" example="/meihua/article/latest" path="/meihua/article/:caty">
+
+| 最新   | 热门 |
+| ------ | ---- |
+| latest | hot  |
+
+</Route>
+
 ## 镁客网 im2maker
 
 ### 镁客网频道
@@ -736,11 +855,27 @@ Supported sub-sites:
 
 </Route>
 
+## 梅斯医学 MedSci
+
+### 推荐
+
+<Route author="nczitzk" example="/medsci/recommend" path="/medsci/recommend"/>
+
 ## 摩根大通研究所
 
 ### 新闻
 
 <Route author="howel52" example="/jpmorganchase" path="/jpmorganchase"/>
+
+## 鸟哥笔记
+
+### 今日事
+
+<Route author="KotoriK" example="/ngbj/today" path="/ngbj/today"/>
+
+### 分类目录
+
+<Route author="KotoriK" example="/ngbj/cat/103" path="/ngbj/cat/:cat" :paramsDesc="['如https://www.niaogebiji.com/cat/103,最后的数字就是要填写在这的id']"/>
 
 ## 派代
 
@@ -881,6 +1016,12 @@ Supported sub-sites:
 ### 标签订阅
 
 <Route author="Jeason0228" example="/sspai/tag/apple" path="/sspai/tag/:keyword" :paramsDesc="['关键词']"/>
+
+## 生物谷
+
+### 最新资讯
+
+<Route author="nczitzk" example="/bioon/latest" path="/bioon/latest"/>
 
 ## 世界卫生组织 WHO
 
@@ -1110,6 +1251,36 @@ Supported sub-sites:
 ### 香评
 
 <Route author="kt286" example="/nosetime/59247733/discuss/new" path="/nosetime/:id/:type/:sort?" :paramsDesc="['用户id，可在用户主页 URL 中找到', '类型，short 一句话香评  discuss 香评', '排序， new 最新  agree 最有用']"/>
+
+## 小刀娱乐网
+
+<Route author="nczitzk" example="/x6d/34" path="/x6d/:id?" :paramsDesc="['分类 id，可在对应分类页面的 URL 中找到，默认为首页最近更新']">
+
+| 技巧分享 | QQ 技巧 | 微信技巧 | 其他教程 | 其他分享 |
+| -------- | ------- | -------- | -------- | -------- |
+| 31       | 55      | 112      | 33       | 88       |
+
+| 宅家自学 | 健身养生 | 摄影剪辑 | 长点知识 | 自我提升 | 两性相关 | 编程办公 | 职场关系 | 新媒体运营 | 其他教程 |
+| -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- | ---------- | -------- |
+| 18       | 98       | 94       | 93       | 99       | 100      | 21       | 22       | 19         | 44       |
+
+| 活动线报 | 流量话费 | 免费会员 | 实物活动 | 游戏活动 | 红包活动 | 空间域名 | 其他活动 |
+| -------- | -------- | -------- | -------- | -------- | -------- | -------- | -------- |
+| 34       | 35       | 91       | 92       | 39       | 38       | 37       | 36       |
+
+| 值得一看 | 找点乐子 | 热门事件 | 节目推荐 |
+| -------- | -------- | -------- | -------- |
+| 65       | 50       | 77       | 101      |
+
+| 值得一听 | 每日一听 | 歌单推荐 |
+| -------- | -------- | -------- |
+| 71       | 87       | 79       |
+
+| 资源宝库 | 书籍资料 | 设计资源 | 剪辑资源 | 办公资源 | 壁纸资源 | 编程资源 |
+| -------- | -------- | -------- | -------- | -------- | -------- | -------- |
+| 106      | 107      | 108      | 109      | 110      | 111      | 113      |
+
+</Route>
 
 ## 新浪专栏
 
