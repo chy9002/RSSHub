@@ -30,6 +30,10 @@ pageClass: routes
 
 <Route author="hoilc" example="/4gamers/tag/英雄聯盟" path="/4gamers/tag/:tag" :paramsDesc="['标签名, 可在标签 URL 中找到']"/>
 
+### 主題
+
+<Route author="bestpika" example="/4gamers/topic/gentlemen-topic" path="/4gamers/topic/:topic" :paramsDesc="['主题, 可在首页上方页面内找到']" />
+
 ## a9vgNews 游戏新闻
 
 ### a9vgNews 游戏新闻
@@ -248,6 +252,20 @@ Example: `https://store.steampowered.com/search/?specials=1&term=atelier` 中的
 | ------ | ---- | -------- |
 | update | hot  | spent    |
 
+## 巴哈姆特
+
+### GNN 新闻
+
+<Route author="Arracc" example="/gamer/gnn/1" path="/gamer/gnn/:category?"  :paramsDesc="['分类']">
+
+暂无图片
+
+| 首页 | PC | TV 掌機 | 手機遊戲 | 動漫畫 | 主題報導 | 活動展覽 | 電競 |
+| ---- | -- | ------- | -------- | ------ | -------- | -------- | ---- |
+| 缺省 | 1  | 3       | 4        | 5      | 9        | 11       | 13   |
+
+</Route>
+
 ## 二柄 APP
 
 ### 新闻
@@ -293,6 +311,18 @@ Example: `https://store.steampowered.com/search/?specials=1&term=atelier` 中的
 ### 最新消息
 
 <Route author="DIYgod" example="/mhw/news" path="/mhw/news" radar="1"/>
+
+## 剑网 3
+
+### 新闻资讯
+
+<Route author="nczitzk" example="/jx3" path="/jx3/:caty?" :paramsDesc="['分类，见下表，默认为最新']">
+
+| 最新    | 新闻  | 活动 | 公告     |
+| ------- | ----- | ---- | -------- |
+| allnews | press | hd   | announce |
+
+</Route>
 
 ## 旅法师营地
 
